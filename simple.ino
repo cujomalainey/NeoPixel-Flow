@@ -6,8 +6,12 @@
 // How many NeoPixels are attached to the Arduino?
 #define NUMPIXELS      40
 
-// Define the fasted color change frequence
+// Define the fastest possible color change frequency
 #define FREQ_MAX  150
+
+// Change this number to get different flow patterns 
+// you may also change this to a variable that is randomly generated to get a pattern each run
+#define RNGSEED 665
 
 // define the maximum color brightness (between 2 and 128)
 const int amplitude = 128;
@@ -19,7 +23,7 @@ int w_red,p_red,w_green,p_green,w_blue,p_blue;
 
 void setup() {
   pixels.begin(); // This initializes the NeoPixel library.
-  randomSeed(678);
+  randomSeed(RNGSEED);
   Serial.begin(9600);
   w_red = random(FREQ_MAX);
   p_red = random();
