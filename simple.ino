@@ -24,7 +24,6 @@ int w_red,p_red,w_green,p_green,w_blue,p_blue;
 void setup() {
   pixels.begin(); // This initializes the NeoPixel library.
   randomSeed(RNGSEED);
-  Serial.begin(9600);
   w_red = random(FREQ_MAX);
   p_red = random();
   w_green = random(FREQ_MAX);
