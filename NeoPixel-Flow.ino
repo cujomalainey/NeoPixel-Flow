@@ -4,7 +4,7 @@
 #define PIN            6
 
 // How many NeoPixels are attached to the Arduino?
-#define NUMPIXELS      40
+#define NUMPIXELS      60
 
 // Define the fastest possible color change frequency
 #define FREQ_MAX  150
